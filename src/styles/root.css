@@ -1,0 +1,32 @@
+:root{
+  --logo-color: #205295;
+  --main-color: #144272;
+  --transparent-color: rgba(20, 66, 114, .2);
+}
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+}
+.container{
+  width: 100vw;
+  height: calc(100vh - 75px);
+  display: grid;
+  grid-template-columns: max(250px, 10%) 1fr;
+}
+@font-face {
+  font-family: 'ralleway';
+  src: url(../fonts/raleway.woff2) format('woff2'),
+    url(../fonts/raleway.woff) format('woff');  
+}
+@font-face {
+  font-family: 'afacad';
+  src: url(../fonts/afacad.woff2) format('woff2'),
+    url(../fonts/afacad.woff) format('woff');  
+}

@@ -1,0 +1,68 @@
+.side-menu{
+  height: calc(100vh - 75px);
+  width: 100%;
+  padding: 50px 0;
+  border-right: 1px solid var(--transparent-color);
+  display: flex;
+  justify-content: center;
+}
+.side-menu__list{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 16px;
+}
+.side-menu__opt{
+  height: 20px;
+  display: flex;
+  column-gap: 16px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.side-menu__opt>img{
+  height: 20px;
+}
+.side-menu__opt>h2{
+  font-family: 'afacad';
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+.projects{
+  position: relative;
+}
+.arrow{
+  transition: all .3s ease-in-out;
+}
+.arrow.show{
+  transform: rotate(90deg);
+}
+.side-menu__opt:hover{
+  text-decoration: underline;
+  transform: translateX(-2px);
+}
+.add-task{  
+  height: 50px;
+  margin-top: auto;  
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;  
+  transition: all .2s ease-in-out;
+  outline: none;
+}
+.add-task:hover{
+  transform: translateY(-2px);
+}
+.add-task:active{
+  transform: translateY(2px);
+}
+.add-task__img{
+  cursor: pointer;
+  height: 100%;
+}
+.task-list{
+  height: 100%;
+  width: 100%;
+}

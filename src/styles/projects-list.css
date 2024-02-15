@@ -1,0 +1,11 @@
+.projects-list{
+  width: calc(100% - 42px);  
+  border-left: 1px solid var(--main-color);
+  position: absolute;    
+  top: 25px;
+  left: 36px;
+  transition: height .3s ease-in-out;
+}
+.projects-list.show{
+  height: 100px;
+}

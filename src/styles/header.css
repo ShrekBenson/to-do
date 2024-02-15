@@ -1,0 +1,28 @@
+.nav-bar{
+  width: 100%;
+  height: 75px;
+  border: 1px solid var(--transparent-color);
+  display: flex;
+  align-items: center;
+}
+.nav-bar__logo{
+  width: max(250px, 10%);  
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  column-gap: 8px;
+}
+.logo{
+  height: 35px;
+}
+.logo-text{
+  height: 35px;
+  font-family: 'ralleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: medium;
+  font-size: 1.25rem;
+  letter-spacing: 12px;
+  color: var(--logo-color);
+}
+.nav-bar__list{
+
+}
