@@ -6,17 +6,16 @@ import add from '../imgs/add.svg';
 import projectsArrow from '../imgs/projects.png';
 import { dialogRender } from './dialog-task';
 import { loadTasks } from '../functions/load-tasks';
-import { storage } from './storage';
 
 export function sideMenu(){
   const icons = [inbox, today, thisWeek, projects];
-  const listContainer = document.querySelector('.task-list');
   const listItem = document.querySelectorAll('.side-menu__opt');
   const optInbox = document.querySelector('.side-menu__opt.inbox');
   const optToday = document.querySelector('.side-menu__opt.today');
   const optWeek = document.querySelector('.side-menu__opt.week');
   const buttonProjects = document.querySelector('.projects');
   const buttonProjectsArrow = document.createElement('img');
+  const listProjects = document.querySelector('.list-projects');
   const addTaskButton = document.querySelector('.add-task');
   const addTaskImg = document.querySelector('.add-task__img');
 
@@ -39,7 +38,14 @@ export function sideMenu(){
   buttonProjectsArrow.classList.add('arrow');
   buttonProjects.appendChild(buttonProjectsArrow);
   buttonProjects.addEventListener('click', () => {
+    buttonProjects.classList.toggle('show');
     buttonProjectsArrow.classList.toggle('show');    
+    
+    if (listProjects.clientHeight === 0) {      
+      listProjects.style.height = `${listProjects.scrollHeight}px`;
+    } else{
+      listProjects.style.height = 0;
+    }
   });
 
   addTaskImg.setAttribute('src', add);

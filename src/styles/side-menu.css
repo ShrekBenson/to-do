@@ -14,6 +14,9 @@
   align-items: flex-start;
   row-gap: 16px;
 }
+.opt-projects{
+  height: 20px;    
+}
 .side-menu__opt{
   height: 20px;
   display: flex;
@@ -30,8 +33,26 @@
   font-weight: 400;
   letter-spacing: 4px;
 }
-.projects{
-  position: relative;
+.list-projects{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;  
+  margin-top: 10px;  
+  margin-left: 36px;
+  border-left: 2px solid var(--transparent-color);
+  overflow: hidden;  
+  transition: height .4s ease-in-out;
+  height: 0;
+}
+.list-projects>li{
+  display: block;
+  padding-left: 10px;
+  cursor: pointer;
+  font-family: 'afacad', 'Courier New', Courier, monospace;
+}
+.list-projects>li:hover{
+  background-color: var(--transparent-color);
 }
 .arrow{
   transition: all .3s ease-in-out;
