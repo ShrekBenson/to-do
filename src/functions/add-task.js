@@ -1,4 +1,4 @@
-import { task, taskProject } from "./class-task";
+import { task } from "./class-task";
 import { taskRender } from "../components/task";
 import { storage } from "../components/storage";
 import { format } from "date-fns";
@@ -15,9 +15,8 @@ export function addTask(title, description, dueDate, priority){
   const stringData = JSON.stringify(newTask);
   
   storage.setItem(keyData, stringData);
-  const retrieveData = storage.getItem(keyData);
-  const taskElement = new taskRender(keyData, JSON.parse(retrieveData));
-  console.log(`Data currently stored:\n${retrieveData}`);
+  const retrievedData = storage.getItem(keyData);
+  const taskElement = new taskRender(keyData, JSON.parse(retrievedData));
     
   taskList.appendChild(taskElement.render());
 }

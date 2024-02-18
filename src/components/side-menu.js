@@ -5,6 +5,7 @@ import projects from '../imgs/projects.svg';
 import add from '../imgs/add.svg';
 import projectsArrow from '../imgs/projects.png';
 import { dialogRender } from './dialog-task';
+import { dialogProjectRender } from './dialog-project';
 import { loadTasks } from '../functions/load-tasks';
 
 export function sideMenu(){
@@ -16,6 +17,7 @@ export function sideMenu(){
   const buttonProjects = document.querySelector('.projects');
   const buttonProjectsArrow = document.createElement('img');
   const listProjects = document.querySelector('.list-projects');
+  const newProject = document.querySelector('.new-project');
   const addTaskButton = document.querySelector('.add-task');
   const addTaskImg = document.querySelector('.add-task__img');
 
@@ -45,7 +47,12 @@ export function sideMenu(){
       listProjects.style.height = `${listProjects.scrollHeight}px`;
     } else{
       listProjects.style.height = 0;
-    }
+    }    
+  });
+
+  newProject.addEventListener('click', () => {
+    const newDialog = new dialogProjectRender();
+    newDialog.render();
   });
 
   addTaskImg.setAttribute('src', add);

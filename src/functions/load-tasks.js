@@ -41,9 +41,11 @@ function loadTasks(time = 'inbox'){
         break;
     }
     keys.forEach(key => {
-      const dataStored = JSON.parse(storage.getItem(key));
-      const task = new taskRender(key, dataStored);
-      taskList.appendChild(task.render());
+      if(!Array.isArray(JSON.parse(storage.getItem(key)))){
+        const dataStored = JSON.parse(storage.getItem(key));
+        const task = new taskRender(key, dataStored);
+        taskList.appendChild(task.render());
+      }
     })    
   }  
 }

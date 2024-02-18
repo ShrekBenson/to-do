@@ -10,6 +10,18 @@
   left: 50%;
   transform: translate(-50%, -50%);  
 }
+.dialog-form.project{
+  width: 500px;
+  height: 250px;  
+  border: 1px solid  var(--transparent-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
 .dialog-form::backdrop{
   backdrop-filter: blur(5px);
   background-color: transparent;
